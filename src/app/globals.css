@@ -130,3 +130,12 @@ button.btn{cursor:pointer;font:inherit;font-weight:700}
 .note{background:#fff8e6;color:#7a5a00;border-radius:10px;padding:10px 12px;font-size:12px;margin-bottom:16px}
 .auth-foot{text-align:center;font-size:13px;color:var(--muted);margin-top:16px}
 .auth-foot a{color:var(--brand);font-weight:700}
+
+.page-center{display:flex;justify-content:center;padding:64px 20px}
+.empty{text-align:center;max-width:460px;width:100%}
+.empty .ico{width:56px;height:56px;border-radius:14px;background:var(--soft);display:grid;place-items:center;margin:0 auto 16px;font-size:26px}
+.empty h1{font-size:20px;margin-bottom:6px}
+.empty p{color:var(--muted)}
+.empty-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.small{font-size:13px}
+.muted{color:var(--muted)}
