@@ -327,5 +327,6 @@ details.desc div{margin-top:8px;font-size:13px;max-width:520px;color:#3a3f55}
 .foot-copy{margin-top:12px}
 
 /* 로고 이미지 */
-.logo-img{display:block;height:32px;width:auto}
-@media(max-width:639px){.logo-img{height:28px}}
+.logo-img{display:block;height:44px;width:auto;max-width:240px}
+@media(max-width:639px){.logo-img{height:34px;max-width:170px}}
+
