@@ -191,3 +191,44 @@ textarea.input{resize:vertical}
 .start-form .brand-extra,.start-form .creator-extra{display:none}
 .start-form:has(input[name="is_brand"]:checked) .brand-extra,
 .start-form:has(input[name="is_creator"]:checked) .creator-extra{display:grid}
+
+/* ===== page 공통 ===== */
+.page-wrap{padding-top:32px;padding-bottom:64px}
+.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.page-head h1{font-size:26px;letter-spacing:-.4px}
+.page-head p{color:var(--muted);margin-top:4px}
+.sec-title{font-size:18px;font-weight:700;margin-bottom:16px}
+.stack>*+*{margin-top:16px}
+.form-msg.notice{background:#efecff;color:var(--brand)}
+
+/* ===== mypage ===== */
+.mypage-grid{display:grid;gap:20px;grid-template-columns:1fr;align-items:start}
+@media(min-width:960px){.mypage-grid{grid-template-columns:1.6fr 1fr}}
+.profile-form .brand-extra,.profile-form .creator-extra{display:none}
+.profile-form:has(input[name="is_brand"]:checked) .brand-extra,
+.profile-form:has(input[name="is_creator"]:checked) .creator-extra{display:grid}
+.kv{display:grid;grid-template-columns:90px 1fr;gap:10px 12px;margin:0;font-size:14px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-weight:500}
+.balance-card{background:linear-gradient(135deg,var(--brand),#7b5cff);color:#fff;border:0}
+.balance-card .amt{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-top:6px}
+.link-list{list-style:none;padding:0;margin:0}
+.link-list li+li{border-top:1px solid var(--border)}
+.link-list a{display:block;padding:10px 0;font-weight:600}
+.link-list a:hover{color:var(--brand)}
+
+/* ===== 약관·방침 ===== */
+.legal{max-width:860px;margin:0 auto;padding:40px 32px}
+.legal h1{font-size:28px;letter-spacing:-.5px}
+.legal-meta{color:var(--muted);font-size:13px;margin:6px 0 28px}
+.legal h2{font-size:17px;margin:32px 0 10px}
+.legal p,.legal li{color:#3a3f55;font-size:15px}
+.legal ol,.legal ul{padding-left:20px;margin:8px 0}
+.legal li+li{margin-top:6px}
+.legal .tbl-wrap{overflow-x:auto;margin:8px 0}
+.legal table{width:100%;border-collapse:collapse;font-size:14px}
+.legal th,.legal td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top}
+.legal th{background:#f9fafc;font-weight:700;white-space:nowrap}
+.legal-foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:13px}
+.legal-foot a{color:var(--brand);font-weight:700}
+
