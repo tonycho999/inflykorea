@@ -12,7 +12,7 @@ export default async function Header() {
     <header className="hdr">
       <div className="container hdr-in">
 <Link href="/" className="logo" aria-label="inflykorea 홈">
-  <img src="/logo.png" alt="inflykorea" className="logo-img" width={160} height={32} />
+  <img src="/logo.png" alt="inflykorea" className="logo-img" width={200} height={48} />
 </Link>
 
         {!me && (
