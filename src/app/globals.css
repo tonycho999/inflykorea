@@ -186,3 +186,8 @@ textarea.input{resize:vertical}
 .msg time{display:block;font-size:11px;color:var(--muted);margin-top:4px}
 .composer{display:flex;gap:8px;align-items:flex-end;padding:12px;border-top:1px solid var(--border);background:#fff}
 .composer textarea{flex:1;min-height:44px;max-height:140px;resize:none}
+
+/* start: 선택한 역할의 입력칸만 표시 */
+.start-form .brand-extra,.start-form .creator-extra{display:none}
+.start-form:has(input[name="is_brand"]:checked) .brand-extra,
+.start-form:has(input[name="is_creator"]:checked) .creator-extra{display:grid}
