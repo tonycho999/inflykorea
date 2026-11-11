@@ -11,9 +11,9 @@ export default async function Header() {
   return (
     <header className="hdr">
       <div className="container hdr-in">
-        <Link href="/" className="logo" aria-label="inflykorea 홈">
-          <span className="logo-mark">in</span>inflykorea
-        </Link>
+<Link href="/" className="logo" aria-label="inflykorea 홈">
+  <img src="/logo.png" alt="inflykorea" className="logo-img" width={160} height={32} />
+</Link>
 
         {!me && (
           <>
