@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from 'next';
 import Link from 'next/link';
+import Header from '@/components/Header';
 import './globals.css';
+
+// 헤더가 로그인 쿠키를 읽기 때문에 모든 페이지가 동적 페이지가 돼요.
+// Cloudflare Pages(next-on-pages)는 동적 페이지에 edge 런타임이 필요해서
+// 루트에 한 번 선언해 아래 모든 페이지에 적용해요.
+export const runtime = 'edge';
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://inflykorea.com').replace(/\/$/, '');
 
@@ -43,51 +49,24 @@ export const viewport: Viewport = {
   themeColor: '#4f3df5',
 };
 
-function Header() {
-  return (
-    <header className="hdr">
-      <div className="container hdr-in">
-        <Link href="/" className="logo" aria-label="inflykorea 홈">
-          <span className="logo-mark">in</span>
-          inflykorea
-        </Link>
-
-        <nav className="nav" aria-label="주 메뉴">
-          <Link href="/creator/campaigns">캠페인 찾기</Link>
-          <Link href="/brand/campaigns/new">캠페인 등록</Link>
-          <Link href="/notices">공지사항</Link>
-        </nav>
-
-        <div className="hdr-right">
-          {/* 역할 전환: Supabase 연동 후 로그인 회원의 보유 역할에 따라 표시 */}
-          <div className="seg" role="group" aria-label="화면 전환">
-            <Link href="/brand/campaigns">브랜드</Link>
-            <Link href="/creator/campaigns">크리에이터</Link>
-          </div>
-          <Link href="/login" className="btn btn-ghost btn-sm">로그인</Link>
-          <Link href="/signup" className="btn btn-primary btn-sm">회원가입</Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 function Footer() {
   return (
     <footer className="foot">
       <div className="container">
         <div className="foot-links">
-          <Link href="/notices">공지사항</Link>
           <Link href="/terms">이용약관</Link>
           <Link href="/privacy"><b>개인정보처리방침</b></Link>
+          <a href="mailto:help@inflykorea.com">고객센터</a>
         </div>
         {/* 사업자 정보는 전자상거래법상 표시 의무 — 실제 값으로 교체 */}
         <p className="foot-biz">
-          상호: (주)inflykorea · 대표: 홍길동 · 사업자등록번호: 000-00-00000
+          상호: 【(주)inflykorea】 · 대표: 【홍길동】 · 사업자등록번호: 【000-00-00000】
           <br />
-          통신판매업신고: 제0000-서울-0000호 · 고객센터: help@inflykorea.com
+          통신판매업신고: 【제0000-서울-0000호】 · 고객센터: help@inflykorea.com
         </p>
-        <p className="foot-copy">© {new Date().getFullYear()} inflykorea.com · 브랜드 × 크리에이터 캠페인 제휴 플랫폼</p>
+        <p className="foot-copy">
+          © {new Date().getFullYear()} inflykorea.com · 브랜드 × 크리에이터 캠페인 제휴 플랫폼
+        </p>
       </div>
     </footer>
   );
