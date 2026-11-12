@@ -25,7 +25,8 @@ export function SubmitButton({
   );
 }
 
-export function FormMessage({ state }: { state: ActionResult }) {
+export function FormMessage({ state }: { state?: ActionResult }) {
+  if (!state) return null;
   if (state.error) return <p className="form-msg err" role="alert">{state.error}</p>;
   if (state.ok && state.ok !== 'sent') return <p className="form-msg ok" role="status">{state.ok}</p>;
   return null;
@@ -46,7 +47,7 @@ export default function ActionForm({
   const ref = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    if (state.ok && resetOnSuccess) ref.current?.reset();
+    if (state?.ok && resetOnSuccess) ref.current?.reset();
   }, [state, resetOnSuccess]);
 
   return (
