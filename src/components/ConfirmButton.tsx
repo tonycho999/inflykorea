@@ -36,7 +36,7 @@ export default function ConfirmButton({
       >
         {label}
       </SubmitButton>
-      {state.error && <span className="inline-err" role="alert">{state.error}</span>}
+      {state?.error && <span className="inline-err" role="alert">{state?.error}</span>}
     </form>
   );
 }
