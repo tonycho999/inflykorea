@@ -7,7 +7,7 @@ import { hasEnv } from '@/lib/utils';
 type Provider = 'naver' | 'kakao' | 'google';
 
 // ✅ 로그인 연동을 마친 뒤 해당 값만 true로 바꾸세요
-const ENABLED: Record<Provider, boolean> = { naver: false, kakao: false, google: false };
+const ENABLED: Record<Provider, boolean> = { naver: false, kakao: false, google: ture };
 const LABEL: Record<Provider, string> = { naver: '네이버', kakao: '카카오', google: 'Google' };
 
 export default function SocialButtons({ next }: { next?: string | null }) {
