@@ -55,7 +55,7 @@ export default function ChatRoom({
   }, [applicationId]);
 
   useEffect(() => {
-    if (state.ok === 'sent') formRef.current?.reset();
+    if (state?.ok === 'sent') formRef.current?.reset();
   }, [state]);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function ChatRoom({
         <div ref={endRef} />
       </div>
 
-      {state.error && <p className="form-msg err" style={{ margin: '0 12px' }} role="alert">{state.error}</p>}
+      {state?.error && <p className="form-msg err" style={{ margin: '0 12px' }} role="alert">{state?.error}</p>}
 
       <form ref={formRef} action={formAction} className="composer">
         <input type="hidden" name="application_id" value={applicationId} />
